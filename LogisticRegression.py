@@ -31,7 +31,7 @@ data_scaled = scaler.transform(data)
 data_scaled = pd.DataFrame(data_scaled, columns=data.columns)
 
 # Define the target variable Y and the features X
-Y = data.iloc[:,-1]
+Y = data.iloc[:,-1] # Y value must be non-continious
 X = data_scaled.drop(["Purchased"], axis=1)
 
 # Split the data into training and testing sets
