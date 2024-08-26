@@ -38,7 +38,7 @@ X = data_scaled.drop(["Purchased"], axis=1)
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=1)
 
 # Initialize the Logistic Regression model with specific parameters
-LR = LogisticRegression(solver="liblinear", C=1)
+LR = LogisticRegression(solver="liblinear", C=0.001)
 
 # Train the Logistic Regression model
 LR.fit(x_train, y_train)
